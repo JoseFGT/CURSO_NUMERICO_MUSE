@@ -40,7 +40,6 @@ Dt = (Tf-To)/N
 print("El salto de tiempo es: Dt =", Dt)
 
 
-
 ### ESQUEMA EULER ###
 
 # Oscilador
@@ -58,11 +57,16 @@ for i in range(0,N):
     Ti1 = To + Dt*(i+1)
     U_o[i+1,:] = array([Ti1, xn])
 
+# Configuramos el gráfico
+plt.axis("equal")                  # Escala igual para ambos ejes
+plt.plot(U_o[:, 0], U_o[:, 1])     # Gráfico de tus datos
+plt.title("Solución por Euler")     # Añadir título
+plt.xlabel("time")        # Título del eje X
+plt.ylabel("x")        # Título del eje Y
+plt.grid(True)                      # Mostrar la cuadrícula
 
-plt.axis("equal")
-plt.plot( U_o[:, 0], U_o[:,1] )
+# Mostrar el gráfico
 plt.show()
-
  
 
 #print("La solución del oscilador armónico por Euler es: ",U_o)
@@ -86,6 +90,13 @@ for i in range(0,N):
     Ti1 = To + Dt*(i+1)
     U_k[i+1,:] = array([Ti1, xn, yn])
 
-plt.axis("equal")
-plt.plot( U_k[:, 1], U_k[:,2] )
-plt.show()
+# Configuramos el gráfico
+plt.axis("equal")                  # Escala igual para ambos ejes
+plt.plot(U_k[:, 1], U_k[:,2])     # Gráfico de tus datos
+plt.title("Solución por Euler")     # Añadir título
+plt.xlabel("x")        # Título del eje X
+plt.ylabel("y")        # Título del eje Y
+plt.grid(True)                      # Mostrar la cuadrícula
+
+# Mostrar el gráfico
+plt.show()1
