@@ -34,8 +34,8 @@ xdo_o = 1
 
 
 To = 0 
-Tf = 7
-N = 70
+Tf = 9
+N = 900
 Dt = (Tf-To)/N
 print("El salto de tiempo es: Dt =", Dt)
 
@@ -89,7 +89,3 @@ for i in range(0,N):
 plt.axis("equal")
 plt.plot( U_k[:, 1], U_k[:,2] )
 plt.show()
-
-
-#print("La solución del problema de Kepler por Euler es: ",U_k)
-
