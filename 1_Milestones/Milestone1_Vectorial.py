@@ -62,7 +62,7 @@ xdto_o = 1
 
 To = 0 
 Tf = 50
-N = 500
+N = 50000
 Dt = (Tf-To)/N
 print("El salto de tiempo es: Dt =", Dt)
 
